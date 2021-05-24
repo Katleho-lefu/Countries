@@ -3,9 +3,37 @@
     background-color: rgb(228, 228, 228);
     height: 100vh;
 }
-.cnter{
-    display: block;
-    margin: auto;
+
+input:focus { 
+    outline: none !important;
+    border-color: #8bb7e6;
+    box-shadow: 0 0 10px #7eaee0;
 }
+
+.card{
+    height: 15vh;
+    border-radius: 20px;
+}
+
+.badge{
+    background-color: rgb(172, 255, 117);
+    color: rgb(87, 87, 87);
+    font-weight: 600
+
+}
+
+.float{
+	position:fixed;
+	width:50px;
+	height:50px;
+	top:5px;
+	right:20px;
+	background-color:rgb(146, 151, 150);
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px rgb(221, 206, 206);
+}
+
 
 
