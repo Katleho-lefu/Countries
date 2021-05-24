@@ -3,9 +3,9 @@
     background-color: rgb(228, 228, 228);
     height: 100vh;
 }
-.cnter{
-    display: block;
-    margin: auto;
+
+textarea:focus, input:focus{
+    outline: none;
 }
 
 
