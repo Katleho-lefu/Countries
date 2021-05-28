@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
     this.getData();
   }
 
-  getData(){
+  getData() {
     this.data = this.countryService.data;
     console.log(this.data)
   }

@@ -4,6 +4,12 @@
     height: 100vh;
 }
 
+.navbar{
+    background-color: rgb(235, 235, 235);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+    color: rgb(138, 138, 138);
+}
+
 input:focus { 
     outline: none !important;
     border-color: #8bb7e6;
@@ -11,7 +17,7 @@ input:focus {
 }
 
 .card{
-    height: 15vh;
+    height: 108px;
     border-radius: 20px;
 }
 
