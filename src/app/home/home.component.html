@@ -1,4 +1,4 @@
-<section class="page">
+<section class="page flex flex-col">
   <nav class="navbar navbar-light bg-dark text-white">
     <a class="navbar-brand text-white">Navbar</a>
     <form class="form-inline">
@@ -10,26 +10,30 @@
 
   <div class="container">
     <div class="row justify-content-center mt-4">
-      <div class="col-12">
+
+      <!-- Search box -->
+      <div class="col-sm-12">
         <div class="d-flex form-group" style="justify-content: center">
           <input type="text" id="text" class="form-control mx-4" placeholder="search country"
-            aria-describedby="inputGroup-sizing-default" style="border-radius: 20px" />
+            aria-describedby="inputGroup-sizing-default" style="border-radius: 10px" />
         </div>
       </div>
 
-      <div class="flex mx-2 shadow" style="margin-top: 30%; border-radius: 20px" *ngFor="let item of [1, 2, 3]">
+      <!-- filters -->
+      <!-- <div class="flex flex-row mx-2" style="margin-top: 30%; border-radius: 20px" *ngFor="let item of [1, 2, 3]">
         <span class="badge" style="font-size: 110%">Warning</span>
-      </div>
+      </div> -->
 
-      <div class="flex flex-col my-0 overflow-auto" *ngFor="let item of data">
-        <div class="col mt-4">
+      <!-- cards -->
+      <div class="my-2" *ngFor="let item of data">
+        <div class="col">
           <div class="card">
             <div class="d-flex">
-              <div class="col-3 mr-3">
-                <img src= {{item.flag}} alt="ads via Carbon" height="90" width="108"
-                  style="border-radius: 20px; margin-top: 14%" />
+              <div class="col-3" style="display: flex; align-items: center;">
+                <img src= {{item.flag}} alt="ads via Carbon" height="80" width="108"
+                  style="border-radius: 20px;"/>
               </div>
-              <div class="col-9">
+              <div class="col-9 ml-4">
                 <div class="card-body">
                   <h6 class="card-title">Country: {{item.country}}</h6>
                   <p class="card-text">Capital: {{item.capital}}</p>
@@ -39,6 +43,8 @@
           </div>
         </div>
       </div>
+
+
     </div>
   </div>
 </section>
