@@ -1,53 +1,52 @@
 <section class="page flex flex-col">
-  <nav class="navbar navbar-light bg-dark text-white">
-    <a class="navbar-brand text-white">Navbar</a>
-    <form class="form-inline">
-      <a href="#" class="float shadow">
-        <i class="fa fa-plus my-float"></i>
-      </a>
-    </form>
-  </nav>
 
-  <div class="container">
-    <div class="row justify-content-center mt-4">
+	<!--Navbar-->
+	<nav class="navbar shadow">
+		<h5>Navbar</h5>
+		<form class="form-inline">
+			<a href="#" class="float shadow">
+				<i class="fa fa-plus my-float"></i>
+			</a>
+		</form>
+	</nav>
 
-      <!-- Search box -->
-      <div class="col-sm-12">
-        <div class="d-flex form-group" style="justify-content: center">
-          <input type="text" id="text" class="form-control mx-4" placeholder="search country"
-            aria-describedby="inputGroup-sizing-default" style="border-radius: 10px" />
-        </div>
-      </div>
+	<div class="container">
+		<div class="row justify-content-center mt-4">
 
-      <!-- filters -->
-      <!-- <div class="flex flex-row mx-2" style="margin-top: 30%; border-radius: 20px" *ngFor="let item of [1, 2, 3]">
-        <span class="badge" style="font-size: 110%">Warning</span>
-      </div> -->
+			<!-- Search box -->
+			<div class="col-sm-12">
+				<div class="d-flex form-group" style="justify-content: center">
+					<input type="text" id="text" class="form-control mx-4" placeholder="search country"
+						aria-describedby="inputGroup-sizing-default" style="border-radius: 10px" />
+				</div>
+			</div>
 
-      <div style="margin-top: 20%;">
-        <div class="my-2" *ngFor="let item of data">
-        <div class="col">
-          <div class="card">
-            <div class="d-flex">
-              <div class="col-3" style="display: flex; align-items: center;">
-                <img src= {{item.flag}} alt="ads via Carbon" height="80" width="108"
-                  style="border-radius: 20px;"/>
-              </div>
-              <div class="col-9 ml-4">
-                <div class="card-body">
-                  <h6 class="card-title">Country: {{item.country}}</h6>
-                  <p class="card-text">Capital: {{item.capital}}</p>
-                </div>
-              </div>
-           
-          </div>
-        </div>
-      </div>
-      </div>
-      <!-- cards -->
-      
+			<!-- filters -->
+			<!-- <div class="flex flex-row mx-2" style="margin-top: 30%; border-radius: 20px" *ngFor="let item of [1, 2, 3]">
+				<span class="badge" style="font-size: 110%">Warning</span>
+			</div> -->
+
+			<!--Cards-->
+			<div class="overflow-auto" style="margin-top: 30%; height: 420px;">
+
+				<div class="card mx-3 my-3" *ngFor="let item of data">
+				<div class="card-body">
+					<div class="row">
+						<div class="col-6">
+							<img class="img-fluid" src={{item.flag}} alt="ads via Carbon" style="border-radius: 20px;" />
+						</div>
+						<div class="col-6 ">
+							<h6 class="card-title">Country: {{item.country}}</h6>
+							<p class="card-text">Capital: {{item.capital}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			</div>
+		
+		</div>
 
 
-    </div>
-  </div>
-</section>
+	
+

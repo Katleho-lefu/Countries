@@ -3,10 +3,17 @@
   height: 100vh;
 }
 
+.navbar{
+    background-color: rgb(231, 231, 231);
+    color: rgb(71, 69, 69);
+    height: 60px;
+}
+
 input:focus {
   outline: none !important;
   border-color: #8bb7e6;
-  box-shadow: 0 0 10px #7eaee0;
+  box-shadow: 0 0 10px #6f7277;
+  
 }
 
 .card {
