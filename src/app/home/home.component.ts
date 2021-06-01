@@ -8,7 +8,7 @@ import { CountryserviceService } from '../services/countryservice.service';
 })
 export class HomeComponent implements OnInit {
 
-  searchText:" ";
+  input:" ";
   data: any
 
   constructor( private countryService: CountryserviceService) { }

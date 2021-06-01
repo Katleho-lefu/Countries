@@ -17,7 +17,7 @@
 			<div class="col-sm-12">
 				<div class="d-flex form-group" style="justify-content: center">
 					<input type="text" id="text" class="form-control mx-4" placeholder="search country"
-						aria-describedby="inputGroup-sizing-default" style="border-radius: 10px" />
+						aria-describedby="inputGroup-sizing-default" style="border-radius: 10px" [(ngModel)]="input" />
 				</div>
 			</div>
 
@@ -28,13 +28,13 @@
 
 			<!--Cards-->
 			<div class="overflow-auto" style="margin-top: 30%; height: 420px;">
-				<div class="card mx-3 my-3" *ngFor="let item of data">
+				<div class="card mx-3 my-3" *ngFor="let item of data | filter: input">
 				<div class="card-body">
 					<div class="row">
-						<div class="col-6">
-							<img class="img-fluid" src={{item.flag}} alt="ads via Carbon" style="border-radius: 20px;" />
+						<div class="col-4">
+							<img class="img-fluid" src={{item.flag}} style="border-radius: 15px;" />
 						</div>
-						<div class="col-6 ">
+						<div class="col-8 ">
 							<h6 class="card-title">Country: {{item.country}}</h6>
 							<p class="card-text">Capital: {{item.capital}}</p>
 						</div>

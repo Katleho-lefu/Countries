@@ -6,9 +6,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CardComponent } from './components/card/card.component';
-import { SearchFilterPipe } from './pipes/search-filter.pipe';
 import { FormsModule } from '@angular/forms';
-import { HighlightDirective } from './directives/highlight.directive';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 @NgModule({
@@ -16,14 +15,13 @@ import { HighlightDirective } from './directives/highlight.directive';
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    CardComponent,
-    SearchFilterPipe,
-    HighlightDirective,
+    CardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    Ng2SearchPipeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
