@@ -1,45 +1,35 @@
-
 .page {
-    background-color: rgb(236, 236, 236);
-    height: 100vh;
+  background-color: rgb(247, 247, 247);
+  height: 100vh;
 }
 
-.navbar{
-    background-color: rgb(235, 235, 235);
-    box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
-    color: rgb(138, 138, 138);
+input:focus {
+  outline: none !important;
+  border-color: #8bb7e6;
+  box-shadow: 0 0 10px #7eaee0;
 }
 
-input:focus { 
-    outline: none !important;
-    border-color: #8bb7e6;
-    box-shadow: 0 0 10px #7eaee0;
+.card {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
 }
 
-.card{
-    height: 108px;
-    border-radius: 20px;
+.badge {
+  background-color: rgb(172, 255, 117);
+  color: rgb(87, 87, 87);
+  font-weight: 600;
 }
 
-.badge{
-    background-color: rgb(172, 255, 117);
-    color: rgb(87, 87, 87);
-    font-weight: 600
-
+.float {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  top: 5px;
+  right: 20px;
+  background-color: rgb(146, 151, 150);
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px rgb(221, 206, 206);
 }
-
-.float{
-	position:fixed;
-	width:50px;
-	height:50px;
-	top:5px;
-	right:20px;
-	background-color:rgb(146, 151, 150);
-	color:#FFF;
-	border-radius:50px;
-	text-align:center;
-	box-shadow: 2px 2px 3px rgb(221, 206, 206);
-}
-
-
-
