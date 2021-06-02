@@ -8,18 +8,27 @@ import { CountryserviceService } from '../services/countryservice.service';
 })
 export class HomeComponent implements OnInit {
 
-  input:" ";
-  data: any
+  input: " ";
+  Countries: any;
 
-  constructor( private countryService: CountryserviceService) { }
+  constructor(private countryService: CountryserviceService) { }
 
   ngOnInit(): void {
     this.getData();
   }
 
+  //set data from api to local storage
   getData() {
-    this.data = this.countryService.data;
-    console.log(this.data)
+
+    if (!localStorage.getItem("Countries")) {
+      this.countryService.getCountries().subscribe(data => {
+        this.Countries = data;
+        localStorage.setItem('Countries', JSON.stringify(this.Countries));
+      })
+      return
+    }
+    
+    this.Countries = JSON.parse(localStorage.getItem("Countries"));
   }
 
 

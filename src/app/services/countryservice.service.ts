@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Data } from './../mock';
 
 
@@ -7,11 +9,17 @@ import { Data } from './../mock';
 })
 export class CountryserviceService {
 
-  data= Data
+  api = "https://restcountries.eu/rest/v2/all";
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  getData(){
-    return this.data
+  //get data from mock data
+  // getData(){
+  //   return this.data
+  // }
+
+  //get data from api
+  getCountries (): Observable<any> {
+    return this.http.get(this.api);
   }
 }
