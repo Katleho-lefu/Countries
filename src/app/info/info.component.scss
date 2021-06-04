@@ -5,8 +5,15 @@
     justify-content: center;
   }
 
-img {
+.bground {
     border-radius: 10px;
     width: 100%;
-    height: 80
+    height: 50%;
+    background-image: url("https://i.pinimg.com/474x/dd/63/6e/dd636e2685bc26cc9a921c9744b030b6.jpg"); /* The image used */
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgb(0 0 0 / 61%);
+    color: white;
+    display: flex;
+    flex-direction: column;
 }
