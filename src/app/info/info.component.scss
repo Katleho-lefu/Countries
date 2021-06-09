@@ -25,11 +25,29 @@
 
 .card {
   display: flex;
-  align-items: center;
+  justify-content: start;
   border-radius: 20px;
   border: none;
   color: rgb(154, 154, 160);
+
+  //shift text in cards to the left
+  span{
+    margin-left: 0%;
+  }
+
+  //enlarge svg icons in cards
+  svg{
+  height: 8%;
+  width: 8%;
 }
+
+}
+
+.italic{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
 
 
 
