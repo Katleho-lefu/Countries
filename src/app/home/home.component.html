@@ -23,7 +23,7 @@
 
 			<!--Cards-->
 			<div class="overflow-auto" style="margin-top: 30%; height: 420px;">
-				<div class="card shadow mx-3 my-3 " *ngFor="let item of Countries | filter: input" (click)="sendNotification()">
+				<div class="card shadow mx-3 my-3 " *ngFor="let item of Countries | filter: input; let id = index" [routerLink]="['/info', item.id]">
 				<div class="card-body">
 					<div class="row">
 						<div class="col-4">
