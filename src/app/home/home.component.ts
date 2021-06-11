@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CountryserviceService } from '../services/countryservice.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class HomeComponent implements OnInit {
   input: " ";
   Countries: any;
 
-  constructor(private countryService: CountryserviceService) { }
+  constructor(private countryService: CountryserviceService, public router: Router) { }
 
   ngOnInit(): void {
     this.getData();
@@ -30,5 +31,10 @@ export class HomeComponent implements OnInit {
     // else if items are available in localStorage, get them and put them in Countries[]
     this.Countries = JSON.parse(localStorage.getItem("Countries"));
   }
+
+  // go_to_info(id){
+  //   console.log(id);
+  //   this.router.navigate([`info/${id}`]);
+  // }
 
 }

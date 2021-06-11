@@ -23,19 +23,19 @@
 
 			<!--Cards-->
 			<div class="overflow-auto" style="margin-top: 30%; height: 420px;">
-				<div class="card shadow mx-3 my-3 " *ngFor="let item of Countries | filter: input; let id = index" [routerLink]="['/info', item.id]">
-				<div class="card-body">
-					<div class="row">
-						<div class="col-4">
-							<img class="img-fluid" src={{item.flag}} style="border-radius: 15px;"/>
-						</div>
-						<div class="col-8">
-							<h6 class="card-title">Country: {{item.name}}</h6>
-							<p class="card-text">Capital: {{item.capital}}</p>
-						</div>
+				<a class="card shadow mx-3 my-3 " *ngFor="let item of Countries | filter: input; let id= index;" routerLink="/info/{{id}}">
+					<div class="card-body">
+							<div class="row">
+								<div class="col-4">
+									<img class="img-fluid" src={{item.flag}} style="border-radius: 15px;"/>
+								</div>
+								<div class="col-8">
+									<h6 class="card-title">Country: {{item.name}}</h6>
+									<p class="card-text">Capital: {{item.capital}}</p>
+								</div>
+							</div>
 					</div>
-				</div>
-			</div>
+				</a>
 			</div>
 		
 		</div>

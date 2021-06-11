@@ -13,6 +13,7 @@ export class InfoComponent implements OnInit {
   constructor(private countryService: CountryserviceService) { }
 
   ngOnInit(): void {
+    this.get_countries();
   }
 
   get_countries(){
