@@ -22,5 +22,10 @@ export class InfoComponent implements OnInit {
     })
   }
 
+  // trying to emit information i got from home component with each specific id
+
+  get_info(id) {
+    
+  }
 
 }

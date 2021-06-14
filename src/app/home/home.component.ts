@@ -8,9 +8,9 @@ import { CountryserviceService } from '../services/countryservice.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  // @Output() notifyParent: EventEmitter<any> = new EventEmitter();
+  //variables
+  @Output() countries: EventEmitter<any> = new EventEmitter();
   input: " ";
-  Countries: any;
 
   constructor(private countryService: CountryserviceService, public router: Router) { }
 
@@ -23,18 +23,19 @@ export class HomeComponent implements OnInit {
    // If there are no items in localStorage, set them
     if (!localStorage.getItem("Countries")) {
       this.countryService.getCountries().subscribe(data => {
-        this.Countries = data;
-        localStorage.setItem('Countries', JSON.stringify(this.Countries));
+        this.countries = data;
+        localStorage.setItem('Countries', JSON.stringify(this.countries));
       })
       return
     }
     // else if items are available in localStorage, get them and put them in Countries[]
-    this.Countries = JSON.parse(localStorage.getItem("Countries"));
+    this.countries = JSON.parse(localStorage.getItem("Countries"));
   }
 
-  // go_to_info(id){
-  //   console.log(id);
-  //   this.router.navigate([`info/${id}`]);
-  // }
+  //trying to emit the clicked card in the info-component
+  go_to_info(id){
+    this.countries.emit([`info/${id}`]);
+    // this.router.navigate([`info/${id}`]);
+  }
 
 }
