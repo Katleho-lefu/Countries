@@ -15,7 +15,7 @@
     box-shadow: inset 0 0 0 2000px rgb(0 0 0 / 50%);
     color: white;
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
 }
 
 .mve_txt{
@@ -37,14 +37,25 @@
 
   //enlarge svg icons in cards
   svg{
-  height: 8%;
-  width: 8%;
-}
+  height: 4%;
+  width: 4%;
+    }
 
 }
+
+.back{
+  svg{
+    position: absolute; // makes it not to take space and be on top instead
+    width: 6%;
+    height: 6%;
+    margin-left: 2%;   
+    }
+}
+
 
 .italic{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 14px;
 }
 
 

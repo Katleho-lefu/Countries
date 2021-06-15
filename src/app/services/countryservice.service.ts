@@ -5,16 +5,20 @@ import { Data } from './../mock';
 
 
 @Injectable({
-  providedIn: 'root'
+	providedIn: 'root'
 })
 export class CountryserviceService {
 
-  api = "https://restcountries.eu/rest/v2/all";
+	api = "https://restcountries.eu/rest/v2";
 
-  constructor(private http: HttpClient) { }
+	constructor(private http: HttpClient) { }
 
-  //get data from api
-  getCountries (): Observable<any> {
-    return this.http.get(this.api);
-  }
+	//get data from api
+	getCountries (): Observable<any> {
+		return this.http.get(`${this.api}`);
+	}
+
+	getOneCountry(code: any){
+		return this.http.get(`${this.api}/alpha/${code}`)
+	}
 }

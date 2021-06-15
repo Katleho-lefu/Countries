@@ -1,31 +1,45 @@
 import { Component, OnInit } from '@angular/core';
 import { CountryserviceService } from '../services/countryservice.service';
+import { ActivatedRoute, Params } from '@angular/router';
+import {Location} from '@angular/common';
 
 @Component({
-  selector: 'info',
-  templateUrl: './info.component.html',
-  styleUrls: ['./info.component.scss']
+	selector: 'info',
+	templateUrl: './info.component.html',
+	styleUrls: ['./info.component.scss']
 })
 export class InfoComponent implements OnInit {
 
-  countries:any
+	countries:any
+	country: any = {}
+	currencies: any
 
-  constructor(private countryService: CountryserviceService) { }
+	constructor(private countryService: CountryserviceService, private activatedRoute: ActivatedRoute, private location: Location) { }
 
-  ngOnInit(): void {
-    this.get_countries();
-  }
+	ngOnInit(): void {
+		this.get_country();
+	}
 
-  get_countries(){
-    this.countryService.getCountries().subscribe(data=>{
-      this.countries= data;
-    })
-  }
+	back() {
+		this.location.back();
+	  }
 
-  // trying to emit information i got from home component with each specific id
+	get_country(){
+		this.activatedRoute.params.subscribe((params: Params) => {
+			this.countryService.getOneCountry(params.code).subscribe((data: any)=>{
+				this.country = data;
+				if (this.country.currencies[0].length < 0) return
 
-  get_info(id) {
-    
-  }
+				console.log(data.currencies);
+				this.currencies = data.currencies
+			})
+		});
+	}
+
+	// trying to emit information i got from home component with each specific id
+
+	// get_info(id) {
+		
+	// }
 
 }

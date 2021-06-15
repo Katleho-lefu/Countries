@@ -24,7 +24,7 @@
 			<!--Cards-->
 			<!--routerLink="/info/{{id}}"-->
 			<div class="overflow-auto" style="margin-top: 30%; height: 420px;">
-				<a class="card shadow mx-3 my-3 " *ngFor="let item of countries | filter: input; let id= index;" (click)="go_to_info(id)">
+				<a class="card shadow mx-3 my-3 " *ngFor="let item of countries | filter: input;" (click)="go_to_info(item)">
 					<div class="card-body">
 							<div class="row">
 								<div class="col-4">
