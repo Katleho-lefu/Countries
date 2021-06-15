@@ -4,8 +4,8 @@
 }
 
 .navbar{
-    background-color: rgb(231, 231, 231);
-    color: rgb(71, 69, 69);
+    background-color: #343a40;
+    color: rgb(181, 181, 181);
     height: 60px;
 }
 
@@ -36,4 +36,13 @@ input:focus {
   border-radius: 50px;
   text-align: center;
   box-shadow: 2px 2px 3px rgb(221, 206, 206);
+}
+
+section {
+  background-color: rgb(182, 182, 182);
+}
+
+svg{
+  height: 6%;
+  width: 6%;
 }

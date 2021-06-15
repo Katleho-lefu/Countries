@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
 	}
 
 	//trying to emit the clicked card in the info-component
-	go_to_info(country: any){
+	go_to_info(country){
 		//this.countries.emit([`info/${id}`]);
 		this.router.navigate([`info/${country.alpha3Code}`]);
 	}
