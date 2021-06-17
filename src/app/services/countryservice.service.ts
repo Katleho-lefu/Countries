@@ -17,6 +17,7 @@ export class CountryserviceService {
 		return this.http.get(`${this.api}`);
 	}
 
+	//get data from one country [identified by the code]
 	getOneCountry(code: any){
 		return this.http.get(`${this.api}/alpha/${code}`)
 	}
