@@ -2,8 +2,6 @@ import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/cor
 import { ActivatedRoute, Router } from '@angular/router';
 import { CountryserviceService } from '../services/countryservice.service';
 
-import slugify from "slugify";
-
 @Component({
 	selector: 'home',
 	templateUrl: './home.component.html',
@@ -22,7 +20,7 @@ export class HomeComponent implements OnInit {
 
 	//set data from api to local storage
 	getData() {
-	 // If there are no items in localStorage, set them
+		// If there are no items in localStorage, set them
 		if (!localStorage.getItem("Countries")) {
 			this.countryService.getCountries().subscribe(data => {
 				this.countries = data;
@@ -35,9 +33,18 @@ export class HomeComponent implements OnInit {
 	}
 
 	//trying to emit the clicked card in the info-component
-	go_to_info(country){
-		//this.countries.emit([`info/${id}`]);
+	go_to_info(country) {
 		this.router.navigate([`info/${country.alpha3Code}`]);
+	}
+
+
+	// Methods to route to my github and linkedin
+	open_github() {
+		window.open("https://github.com/katdarad/Countries")
+	}
+
+	open_linkedin() {
+		window.open("https://www.linkedin.com/in/victor-lefu-a11627200/")
 	}
 
 }

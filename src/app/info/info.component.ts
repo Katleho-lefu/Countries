@@ -10,9 +10,7 @@ import {Location} from '@angular/common';
 })
 export class InfoComponent implements OnInit {
 
-	countries:any
 	country: any = {}
-	currencies: any
 
 	constructor(private countryService: CountryserviceService, private activatedRoute: ActivatedRoute, private location: Location) { }
 
@@ -20,26 +18,18 @@ export class InfoComponent implements OnInit {
 		this.get_country();
 	}
 
+	//back to previous page
 	back() {
 		this.location.back();
 	  }
 
+	// get the country that was clicked in the home page
 	get_country(){
 		this.activatedRoute.params.subscribe((params: Params) => {
 			this.countryService.getOneCountry(params.code).subscribe((data: any)=>{
 				this.country = data;
-				if (this.country.currencies[0].length < 0) return
-
-				console.log(data.currencies);
-				this.currencies = data.currencies
 			})
 		});
 	}
-
-	// trying to emit information i got from home component with each specific id
-
-	// get_info(id) {
-		
-	// }
 
 }
