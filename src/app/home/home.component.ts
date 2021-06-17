@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
-import {  Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { CountryserviceService } from '../services/countryservice.service';
 
 @Component({
